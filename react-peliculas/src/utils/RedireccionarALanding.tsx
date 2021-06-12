@@ -1,6 +1,6 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect } from "react-router";
 
 export default function RedireccionarALanding(){
-    return <Redirect to={{pathname:'/'}} />
+    return <Redirect to={{pathname: '/'}} />
 }

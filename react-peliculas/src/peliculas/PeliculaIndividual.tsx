@@ -1,8 +1,9 @@
 import { pelicula } from "./peliculas.model";
+import css from './PeliculaIndividual.module.css'
 import React from "react";
-import css from './Peliculaindividual.module.css'
 
-export default function PeliculaIndividual(props: peliculaIndividualProps) {
+export default function PeliculaIndividual(props: peliculaIndividualProps){
+
     const construirLink = () => `/pelicula/${props.pelicula.id}`
 
     return (
@@ -11,14 +12,12 @@ export default function PeliculaIndividual(props: peliculaIndividualProps) {
                 <img src={props.pelicula.poster} alt="Poster" />
             </a>
             <p>
-                <a href={construirLink()}>
-                    {props.pelicula.titulo}
-                </a>
+                <a href={construirLink()}>{props.pelicula.titulo}</a>
             </p>
         </div>
     )
 }
 
-interface peliculaIndividualProps {
+interface peliculaIndividualProps{
     pelicula: pelicula;
 }

@@ -1,7 +1,15 @@
 import React from "react";
+import FormularioCines from "./FormularioCines";
 
-export default function CrearCines(){
+export default function CrearCines() {
     return (
-        <>Crear Cine</>
+        <>
+            <h3>Crear cine</h3>
+            <FormularioCines
+                modelo={{nombre: ''}}
+                onSubmit={valores => console.log(valores)}
+            />
+        </>
+
     )
 }

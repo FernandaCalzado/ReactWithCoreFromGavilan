@@ -1,9 +1,12 @@
-import React, { ReactElement } from 'react';
-export default class ErrorBoundary extends React.Component<errorBoundaryProps, errorBoundaryState>{
+import React, { ReactElement } from "react";
+
+export default class ErrorBoundary extends
+    React.Component<errorBoundaryProps, errorBoundaryState> {
     constructor(props: errorBoundaryProps) {
         super(props);
         this.state = { hayError: false, mensaje: '' }
     }
+
     componentDidCatch(error: any, errorInfo: any) {
         console.log(error);
         console.log(errorInfo);
@@ -11,7 +14,7 @@ export default class ErrorBoundary extends React.Component<errorBoundaryProps, e
 
     static getDerivedStateFromError(error: any){
         console.log(error);
-        return {hayError: true,mensaje: error}
+        return {hayError: true, mensaje: error};
     }
 
     render() {
@@ -22,9 +25,11 @@ export default class ErrorBoundary extends React.Component<errorBoundaryProps, e
                 return <h3>{this.state.mensaje}</h3>
             }
         }
+
         return this.props.children;
     }
 }
+
 interface errorBoundaryState {
     hayError: boolean;
     mensaje: string;

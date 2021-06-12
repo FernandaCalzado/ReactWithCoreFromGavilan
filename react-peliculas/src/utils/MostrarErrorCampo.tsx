@@ -2,9 +2,7 @@ import React from "react";
 
 export default function MostrarErrorCampo(props: mostrarErrorCampoProps){
     return (
-        <div className="text-danger">
-        {props.mensaje}
-    </div> 
+        <div className="text-danger">{props.mensaje}</div>
     )
 }
 
